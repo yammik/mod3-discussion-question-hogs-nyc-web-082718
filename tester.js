@@ -1,19 +1,33 @@
-// poop
-
 function fadeOut(el) {
-  const elRef = el
-  elRef.classList.add("fade-up-out")
+  el.classList.add("fade-up-out")
   setTimeout(() => {
-    elRef.style.opacity = 0
-    elRef.classList.remove("fade-up-out")
+    el.style.opacity = 0
+    el.classList.remove("fade-up-out")
   }, 1000)
 }
 
-function fadeIn(el) {
-  const elRef = el
-  elRef.classList.add("fade-down-in")
+function delayedFadeOut(div, range) {
   setTimeout(() => {
-    elRef.style.opacity = 1
-    elRef.classList.remove("fade-down-in")
+    fadeOut(div)
+  }, Math.random() * range)
+}
+
+function fadeIn(el) {
+  el.classList.add("fade-down-in")
+  setTimeout(() => {
+    el.style.opacity = 1
+    el.classList.remove("fade-down-in")
   }, 1000)
+}
+
+function fadeAllOut(el) {
+  const allOthers = Array.from(document.getElementsByClassName("fade-out-group"))
+  allOthers.forEach(div => {
+    if (div !== el)
+      delayedFadeOut(div, 250)
+  })
+
+  setTimeout(() => {
+    fadeOut(el)
+  }, Math.random()*(350) + 300)
 }

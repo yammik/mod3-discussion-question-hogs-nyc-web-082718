@@ -1,43 +1,63 @@
 html {
   height: 100%;
   width: 100%;
+  font-family: 'Titillium Web', sans-serif;
+
 }
 body {
   margin: 0 0;
   min-height: 100%;
   min-width: 100%;
+  background-color: #605;
+  animation: background-shimmer 20s forwards infinite;
 }
-div {
+div, h1, h2, h3 {
   height: 100%;
   width: 100%;
-}
-h1, h2, h3 {
   margin: 0;
   padding: 0;
+  color: white;
 }
 
 #main-wrapper {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 0;
   transform-style: preserve-3d;
   /*animation: oscillate 40s cubic-bezier(.2,0,.8,1) forwards infinite;*/
 }
 
 #main {
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background-color: #605;
-  animation: background-shimmer 20s forwards infinite;
 }
 
-.fade-up-out {
-  animation: fade-up-out 1s ease-in forwards;
+#bottom-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 150px;
 }
 
-.fade-down-in {
-  animation: fade-down-in 1s ease-out forwards;
+#logo-wrapper {
+  padding: 0 8%;
+  height: fit-content;
+  width: fit-content;
+}
+
+.text-glow-white {
+  color: white;
+  font-size: 30pt;
+  text-shadow: 0px 0px 7px #fff;
+}
+.text-glow-white:hover {
+  animation: white-soft-glow 3s forwards ease-in-out infinite;
 }
 
 #center-text {
@@ -45,10 +65,12 @@ h1, h2, h3 {
   height: fit-content;
 }
 
-.text-glow-white {
-  color: white;
-  font-size: 30pt;
-  animation: white-soft-glow 5s forwards ease-in-out infinite;
+#github-logo {
+  font-family: 'Titillium Web', sans-serif;
+}
+#about-logo {
+}
+#pholder-logo {
 }
 
 @keyframes background-shimmer {
@@ -79,16 +101,22 @@ h1, h2, h3 {
 @keyframes white-soft-glow {
   /*text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;*/
   /*ex: text-shadow: 2px 2px #ff0000;*/
-  0% { text-shadow: 0px 0px 7px #fff; }
-  50% { text-shadow: 0px 0px 20px #fff; }
-  100% { text-shadow: 0px 0px 7px #fff; }
+  0% { text-shadow: 0px 0px 9px #fff; }
+  50% { text-shadow: 0px 0px 25px #fff; }
+  100% { text-shadow: 0px 0px 9px #fff; }
 }
 
+.fade-up-out {
+  animation: fade-up-out 1s ease-in forwards;
+}
 @keyframes fade-up-out {
   0% { transform: translateY(0px); opacity: 1 }
   100% { transform: translateY(-40px); opacity: 0 }
 }
 
+.fade-down-in {
+  animation: fade-down-in 1s ease-out forwards;
+}
 @keyframes fade-down-in {
   0% { transform: translateY(-40px); opacity: 0 }
   100% { transform: translateY(0px); opacity: 1 }
