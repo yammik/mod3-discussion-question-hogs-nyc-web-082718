@@ -1,0 +1,95 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0 0;
+  min-height: 100%;
+  min-width: 100%;
+}
+div {
+  height: 100%;
+  width: 100%;
+}
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+#main-wrapper {
+  position: fixed;
+  margin: 0;
+  transform-style: preserve-3d;
+  /*animation: oscillate 40s cubic-bezier(.2,0,.8,1) forwards infinite;*/
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #605;
+  animation: background-shimmer 20s forwards infinite;
+}
+
+.fade-up-out {
+  animation: fade-up-out 1s ease-in forwards;
+}
+
+.fade-down-in {
+  animation: fade-down-in 1s ease-out forwards;
+}
+
+#center-text {
+  width: fit-content;
+  height: fit-content;
+}
+
+.text-glow-white {
+  color: white;
+  font-size: 30pt;
+  animation: white-soft-glow 5s forwards ease-in-out infinite;
+}
+
+@keyframes background-shimmer {
+  0% { background-color: #605 }
+  33.3% { background-color: #523 }
+  66.6% { background-color: #425 }
+  100% { background-color: #605 }
+}
+
+@keyframes stop-oscillation {
+	100%  { transform: rotateX(0) rotateY(0) rotateZ(0); }
+}
+
+@keyframes oscillate {
+	0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+	10% { transform: rotateX(2deg) rotateY(2deg) rotateZ(-0.25deg); }
+	20% { transform: rotateX(0deg) rotateY(4deg) rotateZ(0.25deg); }
+	30% { transform: rotateX(-2deg) rotateY(2deg) rotateZ(1deg); }
+	40% { transform: rotateX(-4deg) rotateY(0deg) rotateZ(0.25deg); }
+	50% { transform: rotateX(-2deg) rotateY(-2deg) rotateZ(-0.25deg); }
+	60% { transform: rotateX(0deg) rotateY(-4deg) rotateZ(-1deg); }
+	70% { transform: rotateX(2deg) rotateY(-2deg) rotateZ(-1.25deg); }
+	80% { transform: rotateX(4deg) rotateY(0deg) rotateZ(-1deg); }
+	90% { transform: rotateX(2deg) rotateY(2deg) rotateZ(-0.5deg); }
+	100% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+}
+
+@keyframes white-soft-glow {
+  /*text-shadow: h-shadow v-shadow blur-radius color|none|initial|inherit;*/
+  /*ex: text-shadow: 2px 2px #ff0000;*/
+  0% { text-shadow: 0px 0px 7px #fff; }
+  50% { text-shadow: 0px 0px 20px #fff; }
+  100% { text-shadow: 0px 0px 7px #fff; }
+}
+
+@keyframes fade-up-out {
+  0% { transform: translateY(0px); opacity: 1 }
+  100% { transform: translateY(-40px); opacity: 0 }
+}
+
+@keyframes fade-down-in {
+  0% { transform: translateY(-40px); opacity: 0 }
+  100% { transform: translateY(0px); opacity: 1 }
+}
