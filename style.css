@@ -20,6 +20,11 @@ div, h1, h2, h3 {
   color: white;
 }
 
+img {
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
 #main-wrapper {
   position: fixed;
   display: flex;
@@ -36,8 +41,6 @@ div, h1, h2, h3 {
   justify-content: center;
   align-items: center;
   pointer-events: none;
-  /*transform-style: preserve-3d;*/
-  /*animation: oscillate 40s cubic-bezier(.2,0,.8,1) forwards infinite;*/
 }
 
 #haiku-wrapper {
@@ -104,41 +107,11 @@ div, h1, h2, h3 {
   height: fit-content;
 }
 
-#github-logo {
-  font-family: 'Titillium Web', sans-serif;
-}
-#about-logo {
-}
-#pholder-logo {
-}
-
-#hog-img {
-  cursor: pointer;
-}
-
 @keyframes background-shimmer {
   0% { background-color: #605 }
   33.3% { background-color: #523 }
   66.6% { background-color: #424 }
   100% { background-color: #605 }
-}
-
-@keyframes stop-oscillation {
-	100%  { transform: rotateX(0) rotateY(0) rotateZ(0); }
-}
-
-@keyframes oscillate {
-	0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
-	10% { transform: rotateX(2deg) rotateY(2deg) rotateZ(-0.25deg); }
-	20% { transform: rotateX(0deg) rotateY(4deg) rotateZ(0.25deg); }
-	30% { transform: rotateX(-2deg) rotateY(2deg) rotateZ(1deg); }
-	40% { transform: rotateX(-4deg) rotateY(0deg) rotateZ(0.25deg); }
-	50% { transform: rotateX(-2deg) rotateY(-2deg) rotateZ(-0.25deg); }
-	60% { transform: rotateX(0deg) rotateY(-4deg) rotateZ(-1deg); }
-	70% { transform: rotateX(2deg) rotateY(-2deg) rotateZ(-1.25deg); }
-	80% { transform: rotateX(4deg) rotateY(0deg) rotateZ(-1deg); }
-	90% { transform: rotateX(2deg) rotateY(2deg) rotateZ(-0.5deg); }
-	100% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
 }
 
 @keyframes white-soft-glow {
