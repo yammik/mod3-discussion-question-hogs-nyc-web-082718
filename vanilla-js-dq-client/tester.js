@@ -23,6 +23,7 @@ function fadeIn(el) {
 function fadeAllOut(el) {
   const allOthers = Array.from(document.getElementsByClassName("fade-out-group"))
   allOthers.forEach(div => {
+    console.log(div !== el);
     if (div !== el)
       delayedFadeOut(div, 250)
   })
