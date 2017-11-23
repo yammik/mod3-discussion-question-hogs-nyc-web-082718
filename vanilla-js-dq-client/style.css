@@ -27,8 +27,34 @@ div, h1, h2, h3 {
   align-items: center;
   flex-direction: column;
   margin: 0;
-  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+#hog-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  /*transform-style: preserve-3d;*/
   /*animation: oscillate 40s cubic-bezier(.2,0,.8,1) forwards infinite;*/
+}
+
+#haiku-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: fit-content;
+  padding: 0 15px;
+}
+
+.home-group {
+  pointer-events: auto;
+}
+
+.hog {
+  opacity: 0;
+  pointer-events: none;
 }
 
 #main {
@@ -52,13 +78,24 @@ div, h1, h2, h3 {
   width: fit-content;
 }
 
+.haiku-line {
+  margin: 10px 0px;
+}
+
 .text-glow-white {
+  color: white;
+  font-size: 15pt;
+  cursor: default;
+  text-shadow: 0px 0px 7px #fff;
+}
+
+.click-text-glow-white {
   color: white;
   font-size: 30pt;
   cursor: pointer;
   text-shadow: 0px 0px 7px #fff;
 }
-.text-glow-white:hover {
+.click-text-glow-white:hover {
   animation: white-soft-glow 3s forwards ease-in-out infinite;
 }
 
@@ -75,10 +112,14 @@ div, h1, h2, h3 {
 #pholder-logo {
 }
 
+#hog-img {
+  cursor: pointer;
+}
+
 @keyframes background-shimmer {
   0% { background-color: #605 }
   33.3% { background-color: #523 }
-  66.6% { background-color: #425 }
+  66.6% { background-color: #424 }
   100% { background-color: #605 }
 }
 
@@ -109,17 +150,19 @@ div, h1, h2, h3 {
 }
 
 .fade-up-out {
-  animation: fade-up-out 1s ease-in forwards;
+  animation: fade-up-out .7s ease-in forwards;
 }
+
+.fade-down-in {
+  animation: fade-down-in .7s ease-out forwards;
+}
+
 @keyframes fade-up-out {
   0% { transform: translateY(0px); opacity: 1 }
   100% { transform: translateY(-40px); opacity: 0 }
 }
 
-.fade-down-in {
-  animation: fade-down-in 1s ease-out forwards;
-}
 @keyframes fade-down-in {
-  0% { transform: translateY(-40px); opacity: 0 }
+  0% { transform: translateY(-80px); opacity: 0 }
   100% { transform: translateY(0px); opacity: 1 }
 }

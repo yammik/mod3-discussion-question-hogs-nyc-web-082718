@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hogku</title>
+    <link href="./style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"> <!-- just trying to get a look-alike for github's ludicrous $350 dollar logo font so I can use text-shadow and avoid the PNG -->
+  </head>
+  <body>
+
+    <div id="hog-wrapper">
+      <img id="hog-img" src="./assets/mudblood.png" class="hog mudblood-group" alt="" onclick="transitionPage(this, MUDBLOODGROUP, HOMEGROUP)">
+      <div id="haiku-wrapper">
+        <p class="text-glow-white hog mudblood-group haiku-line">My hand she gobbles</p>
+        <p class="text-glow-white hog mudblood-group haiku-line">A morsel down her gullet</p>
+        <p class="text-glow-white hog mudblood-group haiku-line">My pinky is gone</p>
+      </div>
+    </div>
+
+    <div id="hog-wrapper">
+      <img id="hog-img" src="./assets/piggy-smalls.jpg" class="hog piggy-smalls-group" alt="" onclick="transitionPage(this, PIGGYSMALLSGROUP, HOMEGROUP)">
+      <div id="haiku-wrapper">
+        <p class="text-glow-white hog piggy-smalls-group haiku-line">I am his vessel</p>
+        <p class="text-glow-white hog piggy-smalls-group haiku-line">A shadow over my life</p>
+        <p class="text-glow-white hog piggy-smalls-group haiku-line">For him I succor</p>
+      </div>
+    </div>
+
+    <div id="hog-wrapper">
+      <img id="hog-img" src="./assets/truffleshuffle.jpg" class="hog truffleshuffle-group" alt="" onclick="transitionPage(this, TRUFFLESHUFFLEGROUP, HOMEGROUP)">
+      <div id="haiku-wrapper">
+        <p class="text-glow-white hog truffleshuffle-group haiku-line">Run fast shuffle search</p>
+        <p class="text-glow-white hog truffleshuffle-group haiku-line">Little girl beats you with stick</p>
+        <p class="text-glow-white hog truffleshuffle-group haiku-line">Truffles must you find</p>
+      </div>
+    </div>
+
+    <div id="hog-wrapper">
+      <img id="hog-img" src="./assets/rainbowdash.jpg" class="hog rainbowdash-group" alt="" onclick="transitionPage(this, RAINBOWDASHGROUP, HOMEGROUP)">
+      <div id="haiku-wrapper">
+        <p class="text-glow-white hog rainbowdash-group haiku-line">One most elusive</p>
+        <p class="text-glow-white hog rainbowdash-group haiku-line">On your greese spoopy boys slip</p>
+        <p class="text-glow-white hog rainbowdash-group haiku-line">Intangible you're</p>
+      </div>
+    </div>
+
+    <div id="main-wrapper">
+
+      <div id="main">
+        <div id="center-text" class="home-group" onclick="transitionPage(this, HOMEGROUP, MUDBLOODGROUP)">
+          <h1 class="click-text-glow-white">My Favorite Hog</h3>
+        </div>
+      </div>
+
+      <div id="bottom-row">
+        <div id="logo-wrapper" class="home-group" onclick="transitionPage(this, HOMEGROUP, PIGGYSMALLSGROUP)">
+          <h2 id="github-logo" class="click-text-glow-white">GitHub</h2>
+        </div>
+        <div id="logo-wrapper" class="home-group" onclick="transitionPage(this, HOMEGROUP, TRUFFLESHUFFLEGROUP)">
+          <h2 id="about-logo" class="click-text-glow-white">About</h2>
+        </div>
+        <div id="logo-wrapper" class="home-group" onclick="transitionPage(this, HOMEGROUP, RAINBOWDASHGROUP)">
+          <h2 id="pholder-logo" class="click-text-glow-white">disclaimer</h2>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="./index.js" type="text/javascript"></script>
+  </body>
+</html>
