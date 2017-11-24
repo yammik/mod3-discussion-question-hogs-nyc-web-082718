@@ -41,7 +41,6 @@ function fadeAllIn(group) {
     delayedFadeIn(div, SHORTRANGE)
   })
   setTimeout(() => {
-    document.body.style.cursor = "default"
     fadeAllIn(groupIn)
   }, LONGESTPOSSIBLE)
 }
