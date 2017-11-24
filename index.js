@@ -40,11 +40,16 @@ function fadeAllIn(group) {
   group.forEach(div => {
     delayedFadeIn(div, SHORTRANGE)
   })
+  setTimeout(() => {
+    document.body.style.cursor = "default"
+    fadeAllIn(groupIn)
+  }, LONGESTPOSSIBLE)
 }
 
 function transitionPage(el, groupOut, groupIn) {
   fadeAllOut(el, groupOut)
   // should really be using a callback but...
+  // move to promise ples
   setTimeout(() => {
     fadeAllIn(groupIn)
   }, LONGESTPOSSIBLE)
