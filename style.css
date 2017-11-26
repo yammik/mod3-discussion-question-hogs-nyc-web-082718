@@ -12,7 +12,7 @@ body {
   animation: background-shimmer 20s forwards infinite;
 }
 
-div, h1, h2, h3 {
+div, h2, h3 {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -41,6 +41,36 @@ img {
   justify-content: center;
   align-items: center;
   pointer-events: none;
+  flex-direction: column;
+  height: 80%;
+}
+
+.hog-title {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  width: fit-content;
+  padding: 35px 0;
+  font-size: 25pt;
+  animation: text-wobble 20s forwards ease-in-out infinite;\
+}
+
+.hog-title-letter {
+  padding: 0 0;
+  margin: 0 0;
+  cursor: default;
+  transform: rotateY(5deg);
+  color: green;
+  text-shadow: -3px 0px 0px #DfD;
+  animation: text-reveal 10s forwards ease-in-out infinite;
+}
+
+.hog-content-wrapper {
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
 #haiku-wrapper {
@@ -121,6 +151,26 @@ img {
   50% { text-shadow: 0px 0px 25px #fff; }
   100% { text-shadow: 0px 0px 9px #fff; }
 }
+
+@keyframes text-wobble {
+  0%   { transform: translateX(0px);  }
+  50%  { transform: translateX(15px); }
+  100% { transform: translateX(0px);  }
+}
+@keyframes text-reveal {
+  0%   { transform: translateY(0px)   rotateY(5deg);  text-shadow: -3px 0px 0px #DfD; color: green; }
+  25%  { transform: translateY(-25px) rotateY(10deg); text-shadow: -5px 0px 0px #D66; color: red;}
+  50%  { transform: translateY(0px)   rotateY(20deg); text-shadow: -6px 0px 0px #8CD; color: blue;}
+  75%  { transform: translateY(25px)  rotateY(10deg); text-shadow: -5px 0px 0px #FC8; color: orange;}
+  100% { transform: translateY(0px)   rotateY(5deg);  text-shadow: -3px 0px 0px #DfD; color: green; }
+}
+/*@keyframes text-reveal {
+  0%   { transform: rotateX(0deg); transform: rotateY(0deg); text-shadow: 0px 0px 0px #fff; color: green; }
+  25%  { transform: rotateX(5deg); transform: rotateY(10deg); text-shadow: -10px 5px 0px #D66; color: red;}
+  50%  { transform: rotateX(10deg); transform: rotateY(20deg); text-shadow: -20px 10px 0px #8CD; color: blue;}
+  75%  { transform: rotateX(5deg); transform: rotateY(10deg); text-shadow: -10px 5px 0px #FC8; color: orange;}
+  100% { transform: rotateX(0deg); transform: rotateY(0deg); text-shadow: 0px 0px 0px #fff; color: green; }
+}*/
 
 .fade-up-out {
   animation: fade-up-out .7s ease-in forwards;
