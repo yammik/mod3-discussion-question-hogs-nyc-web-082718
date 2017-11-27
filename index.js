@@ -38,13 +38,13 @@ function delayedFadeIn(div, range) {
 function fadeAllOut(el, group) {
   // You're solution here
   group.forEach(div => {
-    delayedFadeOut(div, SHORTRANGE)
+    delayedFadeOut(div)
   })
 }
 
 function fadeAllIn(group) {
   // You're solution here
   group.forEach(div => {
-    delayedFadeIn(div, SHORTRANGE)
+    delayedFadeIn(div)
   })
 }
