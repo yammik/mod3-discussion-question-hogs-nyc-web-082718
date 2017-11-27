@@ -47,8 +47,6 @@ function fadeAllIn(group) {
 
 function transitionPage(el, groupOut, groupIn) {
   fadeAllOut(el, groupOut)
-  // should really be using a callback but...
-  // move to promise ples
   setTimeout(() => {
     fadeAllIn(groupIn)
   }, LONGESTPOSSIBLE)
