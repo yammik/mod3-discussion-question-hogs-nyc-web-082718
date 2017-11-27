@@ -42,9 +42,6 @@ function fadeAllIn(group) {
   group.forEach(div => {
     delayedFadeIn(div, SHORTRANGE)
   })
-  setTimeout(() => {
-    fadeAllIn(groupIn)
-  }, LONGESTPOSSIBLE)
 }
 
 function transitionPage(el, groupOut, groupIn) {
